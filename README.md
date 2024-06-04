@@ -1,11 +1,38 @@
 # Image-Segmentation-Using-U-Net
 
-This is a work-in-progress notebook.
-
 This notebook demonstrates the implementation of a U-Net architecture for image segmentation using TensorFlow and Keras. The U-Net model is a popular deep learning architecture for biomedical image segmentation tasks.
 
-The notebook begins by defining the input and output shapes of the U-Net model. The model consists of a contracting path and an expansive path. The contracting path consists of four max pooling layers and four convolutional blocks. Each convolutional block includes two convolutional layers with a dropout layer in between. The expansive path consists of four upsampling layers and four convolutional blocks. Each upsampling layer is followed by a concatenation with the corresponding layer in the contracting path. The final layer is a 1x1 convolution layer with a sigmoid activation function to predict the segmentation mask.
+## Data Science Bowl 2018: Image Segmentation using U-Net
 
-The model is compiled with the Adam optimizer and the binary cross-entropy loss function. The model summary is printed to show the number of parameters and the shapes of the layers.
+**Introduction:**
 
-The notebook also defines a checkpoint callback to save the model with the best validation loss. 
+This notebook demonstrates the application of the U-Net architecture for image segmentation using the Data Science Bowl 2018 dataset. The notebook provides a concise overview of the dataset, the U-Net model, and the steps involved in training and evaluating the model for image segmentation.
+
+**Dataset:**
+
+The Data Science Bowl 2018 dataset consists of a large collection of images and corresponding segmentation masks. The images depict various biological structures, such as cells and nuclei, and the masks provide pixel-level annotations of these structures.
+
+**U-Net Model:**
+
+The U-Net model is a deep learning architecture specifically designed for image segmentation. It utilizes a convolutional neural network (CNN) with a unique encoder-decoder structure. The encoder progressively downsamples the input image to extract high-level features, while the decoder gradually upsamples the encoded features and combines them with lower-level features to produce a final segmentation mask.
+
+**Steps:**
+
+1. **Data Preparation:**
+    - Load the Data Science Bowl 2018 dataset.
+    - Preprocess the images and masks by resizing, and normalization.
+
+2. **Model Training:**
+    - Initialize the U-Net model with appropriate hyperparameters.
+    - Train the model using the training set and optimize the model parameters based on a chosen loss function.
+    - Monitor the training process and evaluate the model performance on the validation set.
+
+3. **Evaluation:**
+    - Visualize the predicted segmentation masks and compare them with the ground truth masks.
+
+**Conclusion:**
+
+This notebook successfully demonstrates the application of the U-Net architecture for image segmentation using the Data Science Bowl 2018 dataset. The provided code and explanations offer a comprehensive guide for understanding and implementing the U-Net model for image segmentation tasks.
+
+**Acknowledgement**
+Thanks to DigitalSreeni https://www.youtube.com/watch?v=RaswBvMnFxk&list=PLZsOBAyNTZwbR08R959iCvYT3qzhxvGOE&index=6 for U-Net tutorial.
